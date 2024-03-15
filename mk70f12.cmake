@@ -19,7 +19,6 @@ set(LIB_INCLUDES "$ENV{EWL_LIB_PATH}/EWL_Runtime/include"
 target_include_directories(MyOS PUBLIC "${LIB_INCLUDES}")
 
 set(LIB_FPU "$ENV{EWL_LIB_PATH}/lib/armv7e-m/fpu")
-
 set(LIB_ARMV7E "$ENV{EWL_LIB_PATH}/lib/armv7e-m")
 
 # Object build options
@@ -60,9 +59,5 @@ set(CMAKE_EXE_LINKER_FLAGS
     -Xlinker \
     --undefined=__pformatter_ \
     -Xlinker \
-    --defsym=__pformatter=__pformatter_ \
-    -Xlinker \
-    --undefined=__sformatter \
-    -Xlinker \
-    --defsym=__sformatter=__sformatter"
+    --defsym=__pformatter=__pformatter_"
     CACHE INTERNAL "Linker options")
